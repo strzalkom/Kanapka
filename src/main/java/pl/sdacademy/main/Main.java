@@ -47,9 +47,11 @@ public class Main {
 
 		TableUtils tableUtils = new TableUtils();
 
-		int i = 0, j = 3;
-
+		int i = 0, j = 2;
+		tableUtils.print(iActionTable);
 		tableUtils.changeElement(iActionTable, i, j);
+		tableUtils.print(iActionTable);
+		
 	}
 
 	/**
