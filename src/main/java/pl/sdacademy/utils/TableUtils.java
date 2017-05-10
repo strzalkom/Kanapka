@@ -1,5 +1,8 @@
 package pl.sdacademy.utils;
 
+import java.util.Random;
+import java.util.stream.Stream;
+
 public class TableUtils implements ITableUtils {
 
     /**
@@ -48,6 +51,35 @@ public class TableUtils implements ITableUtils {
 	    table[k] = k;
 	}
 	return table;
+    }
+
+    /**
+     * Generowanie liczb w tablicy
+     * 
+     * @param lenght
+     * @param from
+     * @param to
+     * @return
+     */
+    public int[] generateNumbers(int lenght, int from, int to) {
+	if (from >= to) {
+	    // zrzucenie wyjątku na console
+	    throw new IllegalArgumentException("Exception : " + from + ">=" + to);
+	}
+	Random random = new Random();
+	int[] table = new int[lenght];
+	for (int i = 0; i < table.length; i++) {
+	    table[i] = random.nextInt(to - from) + from;
+	}
+	return table;
+    }
+
+    public void printStream(int[] table) {
+
+	Stream.of(table).forEach(e -> {
+	    System.out.println(e + ",");
+	});
+
     }
 
 }
