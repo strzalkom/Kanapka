@@ -7,6 +7,7 @@ import pl.sdacademy.model.Cat;
 import pl.sdacademy.model.Dog;
 import pl.sdacademy.model.OpelCar;
 import pl.sdacademy.model.RenaultCar;
+import pl.sdacademy.utils.TableUtils;
 
 public class Main {
 
@@ -43,6 +44,9 @@ public class Main {
 		}
 
 		voiceFromAnimals();
+		
+		TableUtils tableUtils = new TableUtils();
+		tableUtils.changeElement(table, i, j);
 	}
 
 	/**
