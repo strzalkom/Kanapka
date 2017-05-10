@@ -44,9 +44,12 @@ public class Main {
 		}
 
 		voiceFromAnimals();
-		
+
 		TableUtils tableUtils = new TableUtils();
-		tableUtils.changeElement(table, i, j);
+
+		int i = 0, j = 3;
+
+		tableUtils.changeElement(iActionTable, i, j);
 	}
 
 	/**
