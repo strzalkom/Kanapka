@@ -68,8 +68,15 @@ public class ISortAlgorithmTest {
      */
     @Test
     public void shouldLeaveSortedSortArrayUnchanged() {
-	// TODO
-	assertTrue(false);
+	// given unSortedTable
+	// ISortAlgorithm sortAlgorithm = null;
+	int[] tableToSortTemp = { 1, 2, 4, 5, 87 };
+
+	// when
+	sortAlgorithm.sort(tableToSortTemp);
+
+	// then
+	assertTrue(isTableEqual(tableToSortTemp, sortedTableAsc));
     }
 
     /**
@@ -77,8 +84,18 @@ public class ISortAlgorithmTest {
      */
     @Test
     public void shouldThrowExceptionIfArrayIsNull() {
-	// TODO
-	assertTrue(false);
+	// given
+	int[] emptyArray = null;
+	boolean isArrayNull = false;
+	// when
+	try {
+	    sortAlgorithm.sort(emptyArray);
+	} catch (Exception e) {
+	    isArrayNull = true;
+	    e.printStackTrace();
+	}
+	// then
+	assertTrue(isArrayNull);
     }
 
     /**
