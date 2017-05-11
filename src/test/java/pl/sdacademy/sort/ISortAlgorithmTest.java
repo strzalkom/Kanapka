@@ -7,18 +7,30 @@ import org.junit.Test;
 public class ISortAlgorithmTest {
 
     ISortAlgorithm sortAlgorithm = null;
-    int[] tableToSort = { 1, 5, 87, 2, 4 };
+    int[] unSortedTable = { 1, 5, 87, 2, 4 };
+    int[] sortedTableAsc = { 1, 2, 4, 5, 87 };
+    int[] sortedTableDesc = { 87, 5, 4, 2, 1 };
 
     @Test
     public void shouldSortArrayAscendingByDefault() {
-	// given
-
-	int[] sortedTable = { 1, 2, 4, 5, 87 };
+	// given unSortedTable
 
 	// when
-	sortAlgorithm.sort(tableToSort);
+	sortAlgorithm.sort(unSortedTable);
 
 	// then
+
+	assertTrue(isTableEqual(unSortedTable, sortedTableAsc));
+    }
+
+    /**
+     * Ta metoda porównuje dwie tablice z warunków wejściowych z tablica
+     * sortedTable
+     * 
+     * @param sortedTable
+     * @return
+     */
+    private boolean isTableEqual(int[] tableToSort, int[] sortedTable) {
 	boolean isAllElementEqual = true;
 	int i = 0;
 	while (isAllElementEqual) {
@@ -29,22 +41,19 @@ public class ISortAlgorithmTest {
 
 	    }
 	}
-
-	assertTrue(isAllElementEqual);
+	return isAllElementEqual;
     }
 
     @Test
     public void shouldSortArrayDependingOnTheOrder() {
-	// given
-	ISortAlgorithm sortAlgorithm = null;
-	int[] tableToSort = { 1, 5, 87, 2, 4 };
-	int[] sortedTable = {};
+	// given unSortedTable
+	// ISortAlgorithm sortAlgorithm = null;
 
 	// when
-	sortAlgorithm.sort(tableToSort);
+	sortAlgorithm.sort(unSortedTable, false);
 
 	// then
-	assertTrue(false);
+	assertTrue(isTableEqual(unSortedTable, sortedTableDesc));
     }
 
     @Test
