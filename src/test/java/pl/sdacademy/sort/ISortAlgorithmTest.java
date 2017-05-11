@@ -1,5 +1,6 @@
 package pl.sdacademy.sort;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -85,11 +86,11 @@ public class ISortAlgorithmTest {
     @Test
     public void shouldThrowExceptionIfArrayIsNull() {
 	// given
-	int[] emptyArray = null;
+	int[] notInitializedArray = null;
 	boolean isArrayNull = false;
 	// when
 	try {
-	    sortAlgorithm.sort(emptyArray);
+	    sortAlgorithm.sort(notInitializedArray);
 	} catch (Exception e) {
 	    isArrayNull = true;
 	    e.printStackTrace();
@@ -104,8 +105,18 @@ public class ISortAlgorithmTest {
      */
     @Test
     public void shouldNotThrowIfArrayIsZeroSize() {
-	// TODO
-	assertTrue(false);
+	// given
+	int[] emptyArray = {};
+	boolean isThrowException = false;
+	// when
+	try {
+	    sortAlgorithm.sort(emptyArray);
+	} catch (Exception e) {
+	    isThrowException = true;
+	}
+	// then
+
+	assertFalse(isThrowException);
 
     }
 
