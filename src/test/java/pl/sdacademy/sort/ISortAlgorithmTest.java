@@ -128,7 +128,15 @@ public class ISortAlgorithmTest {
     @Test
     public void shouldSortIfElementsAreNotUnique() {
 	// TODO
-	assertTrue(false);
+	// given
+	int[] notUniqueUnsortedTable = { 1, 3, 5, 7, 3, 1, 5 };
+	int[] notUniqueSortedTable = { 1, 1, 3, 3, 5, 5, 7 };
+
+	// when
+	sortAlgorithm.sort(notUniqueUnsortedTable);
+
+	// then
+	assertTrue(isTableEqual(notUniqueUnsortedTable, notUniqueSortedTable));
 
     }
 }
