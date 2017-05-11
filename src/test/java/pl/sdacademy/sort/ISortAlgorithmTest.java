@@ -68,6 +68,7 @@ public class ISortAlgorithmTest {
      */
     @Test
     public void shouldLeaveSortedSortArrayUnchanged() {
+	// TODO
 	assertTrue(false);
     }
 
@@ -76,6 +77,7 @@ public class ISortAlgorithmTest {
      */
     @Test
     public void shouldThrowExceptionIfArrayIsNull() {
+	// TODO
 	assertTrue(false);
     }
 
@@ -85,6 +87,7 @@ public class ISortAlgorithmTest {
      */
     @Test
     public void shouldNotThrowIfArrayIsZeroSize() {
+	// TODO
 	assertTrue(false);
 
     }
@@ -96,6 +99,7 @@ public class ISortAlgorithmTest {
      */
     @Test
     public void shouldSortIfElementsAreNotUnique() {
+	// TODO
 	assertTrue(false);
 
     }
