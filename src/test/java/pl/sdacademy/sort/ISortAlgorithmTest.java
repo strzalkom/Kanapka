@@ -6,11 +6,13 @@ import org.junit.Test;
 
 public class ISortAlgorithmTest {
 
+    ISortAlgorithm sortAlgorithm = null;
+    int[] tableToSort = { 1, 5, 87, 2, 4 };
+
     @Test
     public void shouldSortArrayAscendingByDefault() {
 	// given
-	ISortAlgorithm sortAlgorithm = null;
-	int[] tableToSort = { 1, 5, 87, 2, 4 };
+
 	int[] sortedTable = { 1, 2, 4, 5, 87 };
 
 	// when
@@ -45,4 +47,25 @@ public class ISortAlgorithmTest {
 	assertTrue(false);
     }
 
+    @Test
+    public void shouldLeaveSortedSortArrayUnchanged() {
+	assertTrue(false);
+    }
+
+    @Test
+    public void shouldThrowExceptionIfArrayIsNull() {
+	assertTrue(false);
+    }
+
+    @Test
+    public void shouldNotThrowIfArrayIsZeroSize() {
+	assertTrue(false);
+
+    }
+
+    @Test
+    public void shouldSortIfElementsAreNotUnique() {
+	assertTrue(false);
+
+    }
 }
