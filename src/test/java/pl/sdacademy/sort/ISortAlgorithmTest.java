@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class ISortAlgorithmTest {
 
-    ISortAlgorithm sortAlgorithm = null;
+    ISortAlgorithm sortAlgorithm = new SortAlgorithm();
     int[] unSortedTable = { 1, 5, 87, 2, 4 };
     int[] sortedTableAsc = { 1, 2, 4, 5, 87 };
     int[] sortedTableDesc = { 87, 5, 4, 2, 1 };
