@@ -18,6 +18,7 @@ public class SortAlgorithm implements ISortAlgorithm {
      * Możemy testować w trakcie implementacji</br>
      * Implementacja będzie zakończona,</br>
      * gdy wszystkie testy będą zakończone sukcesem.
+     * 
      */
     @Override
     public void sort(int[] array, boolean ascending) {
