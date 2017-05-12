@@ -35,17 +35,17 @@ public class ISortAlgorithmTest {
      * @return
      */
     private boolean isTableEqual(int[] tableToSort, int[] sortedTable) {
-	boolean isAllElementEqual = true;
+	boolean isAllElementEqualOrEndofTable = true;
 	int i = 0;
-	while (isAllElementEqual) {
-	    isAllElementEqual = tableToSort[i] == sortedTable[i];
+	while (isAllElementEqualOrEndofTable) {
+	    isAllElementEqualOrEndofTable = tableToSort[i] == sortedTable[i] || !isEndOfTable(tableToSort, i);
 	    i++;
-	    if (!isAllElementEqual) {
-		break;
-
-	    }
 	}
-	return isAllElementEqual;
+	return isAllElementEqualOrEndofTable;
+    }
+
+    private boolean isEndOfTable(int[] tableToSort, int i) {
+	return i == tableToSort.length;
     }
 
     /**
