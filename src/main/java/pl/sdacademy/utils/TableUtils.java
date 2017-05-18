@@ -12,6 +12,17 @@ public class TableUtils implements ITableUtils {
      * @param i
      * @param j
      */
+	
+	
+	 public String print(Integer[] table) {
+		 	String result = "";
+			for (Object element : table) { //
+		 	    result += element + " ";
+		 	}
+		 	return result;
+		     }
+	
+	
     @Override
     public void changeElement(Object[] table, int i, int j) {
 	// TODO Proszę zrobić zamianę elementów w tablicy
@@ -25,18 +36,17 @@ public class TableUtils implements ITableUtils {
 
     }
 
-    public void print(Object[] table) {
-	int start = 0;
-	int end = table.length;
+    public String print(Object[] table) {
+	String result = ""; 
+	
 	for (Object element : table) { //
 	    System.out.print(element);
-	    start++;
-	    if (start != end) {
-		System.out.print(",");
+	    result += element + "";
+	   
 	    }
+	return result;
 	}
-	System.out.println("");
-    }
+	
 
     /**
      * Tworzy tablice od 1 do n
