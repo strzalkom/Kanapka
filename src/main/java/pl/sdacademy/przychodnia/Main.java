@@ -15,8 +15,11 @@ public class Main {
 		Osoba piotrek = new Osoba ("Piotrek", "Nowak", "87041102451");
 		Osoba madzia = new Osoba ("Madzia", "Kowalska", "98011198501");
 		Osoba konrad = new Osoba ("Konrad", "Kuslewicz", "96082206123");
-
-		Osoba[] tablicaOsob = new Osoba[] {piotrek, madzia, konrad};
+        Osoba andrzejek = new Osoba("Andrzej", "Wojtek", "123123123123");
+        Osoba wojtus = new Osoba ("Wojciech","Polski", "1111111111111");
+		
+        
+        Osoba[] tablicaOsob = new Osoba[] {piotrek, madzia, konrad,andrzejek, wojtus};
 		WyszukajOsobe wyszukiwarka = new WyszukajOsobe();
 		
 		
